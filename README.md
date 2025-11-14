@@ -1,6 +1,10 @@
 # CyCTF2025-Audit-Escape
 ---
 
+ <p align="center">
+  <img src="https://github.com/MohamedAshrafElRokh/CyCTF2025-Audit-Escape/blob/main/images/1_dUus09fv-QLANsaJQ1R6Ew.png?raw=true" width="600">
+</p>
+
 # Overview
 
 A cron job runs `reportctl` as root every minute. `reportctl` builds a path to:
@@ -24,8 +28,13 @@ ps aux
 ls -la /etc/cron.d
 sed -n '1,200p' /etc/cron.d/compliance 2>/dev/null || true
 ```
-
+ <p align="center">
+  <img src="https://github.com/MohamedAshrafElRokh/CyCTF2025-Audit-Escape/blob/main/images/1_AIcHxPmgOp5Z8acZzESJ3Q.png?raw=true" width="600">
+</p>
 ### What we observed:
+ <p align="center">
+  <img src="https://github.com/user-attachments/assets/8e3311dd-0a8f-4a70-a795-51127817d47d">
+</p>
 
 A cron entry (`/etc/cron.d/compliance`) runs `reportctl` as **root** every minute.
 
@@ -125,7 +134,11 @@ sed -n '1,500p' /var/log/compliance_report.txt 2>/dev/null || true
 
 ---
 
-# Flag
+ Flag
+
+ <p align="center">
+  <img src="https://github.com/MohamedAshrafElRokh/CyCTF2025-Audit-Escape/blob/main/images/1_qwklT7fA4OSwJwiOdFIdZQ.png?raw=true" >
+</p>
 
 The cron executed the malicious module and printed the flag successfully.
 
