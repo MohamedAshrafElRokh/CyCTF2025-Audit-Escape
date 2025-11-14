@@ -141,9 +141,3 @@ sed -n '1,500p' /var/log/compliance_report.txt 2>/dev/null || true
 </p>
 
 The cron executed the malicious module and printed the flag successfully.
-
----
-
-لو عايز أعمله **بستايل CTF writeup** أو أضيف **صور** أو **Badges** زي:
-
-قولّي وأنا أجهزهولك.
